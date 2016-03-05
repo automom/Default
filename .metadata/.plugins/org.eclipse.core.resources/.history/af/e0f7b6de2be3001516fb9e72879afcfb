@@ -1,0 +1,13 @@
+import java.util.*;
+import java.net.*;
+import java.io.*; 
+
+public class Frame extends java.swing.JFrame{
+	private String Username;
+	private Socket socket;
+	private Printwriter printwriter;
+	
+	public static void main(String[] args){
+		
+	}
+}

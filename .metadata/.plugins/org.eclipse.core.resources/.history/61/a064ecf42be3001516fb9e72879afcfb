@@ -1,0 +1,14 @@
+import java.util.*;
+import java.net.*;
+import java.io.*; 
+
+public class Frame{
+	private String Username;
+	private Socket socket;
+	private ArrayList<String> users;
+	private boolean connection = false;
+	
+	public static void main(String[] args){
+		
+	}
+}
