@@ -1,7 +1,8 @@
 
 public class main {
-	public static void main(String[] args){
-		
+<<<<<<< HEAD
+	public static void main (String[] args){
+		//Jonathan Khan
 		//KHANNN
 	}
 }
