@@ -13,6 +13,8 @@ public class Frame extends JFrame{
 	public static void main(String[] args){
 		Frame test = new Frame();
 		test.makeWindow();
+		//test.basePopulate("label 1");
+		test.populateButton("button 1");
 	}
 	
 	public void makeWindow(){
@@ -20,6 +22,27 @@ public class Frame extends JFrame{
 		Toolkit tk = Toolkit.getDefaultToolkit();
 		Dimension dim = tk.getScreenSize();
 		this.setTitle("frame1");
+		this.setVisible(true);
+	}
+	
+	public void basePopulate(String label){
+		JPanel panel = new JPanel();
+		JLabel label1 = new JLabel(label);
+		label1.setToolTipText("Does not do anything");
+		panel.add(label1);  
+		this.add(panel);
+		this.setVisible(true);
+	}
+	
+	public void populateButton(String label){
+		JButton button1 = new JButton(label);
+		button1.setText("button 1");
+		button1.setSize(10,10);
+		button1.setLocation(50,50);
+		//button1.setBorderPainted(false);
+		//button1.setContentAreaFilled(false);
+		button1.setToolTipText("press me");
+		this.add(button1);
 		this.setVisible(true);
 	}
 }

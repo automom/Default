@@ -1,0 +1,43 @@
+import java.util.*;
+import java.net.*;
+import java.awt.*;
+import java.io.*;
+import javax.swing.*;
+
+public class Frame extends JFrame{
+	private String Username;
+	private Socket socket;
+	private ArrayList<String> users;
+	private boolean isConnected = false;
+	
+	public static void main(String[] args){
+		Frame test = new Frame();
+		test.makeWindow();
+		test.basePopulate("label 1");
+	}
+	
+	public void makeWindow(){
+		this.setSize(400,400);
+		Toolkit tk = Toolkit.getDefaultToolkit();
+		Dimension dim = tk.getScreenSize();
+		this.setTitle("frame1");
+		this.setVisible(true);
+	}
+	
+	public void basePopulate(String label){
+		JPanel panel = new JPanel();
+		JLabel label1 = new JLabel(label);
+		label1.setToolTipText("Does not do anything");
+		panel.add(label1);  
+		this.add(panel);
+		this.setVisible(true);
+	}
+	
+	public void populateButton(String label){
+		JButton button1 = new JButton(label);
+		//button1.setBorderPainted(false);
+		JPanel panel1 = new JPanel();
+		this.add(panel1);
+		//button1.setContentAreaFilled(false);
+	}
+}
