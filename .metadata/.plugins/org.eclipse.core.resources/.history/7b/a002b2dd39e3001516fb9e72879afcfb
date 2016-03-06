@@ -1,0 +1,13 @@
+import java.util.*;
+import java.io.*;
+import java.awt.*;
+import java.awt.Event.*;
+import javax.swing.*;
+
+
+public class Server extends JFrame{
+	private JTextField textField;
+	private JTextArea chatWindow;
+	private ObjectOutputStream output;
+	private ObjectInputStream input;
+}

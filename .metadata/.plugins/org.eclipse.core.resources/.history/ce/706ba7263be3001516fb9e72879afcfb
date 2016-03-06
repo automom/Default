@@ -1,0 +1,40 @@
+import java.util.*;
+import java.io.*;
+import java.net.*;
+import java.awt.*;
+import java.awt.Event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+
+
+public class Server extends JFrame{
+	private JTextField textField;
+	private JTextArea textArea;
+	private ObjectOutputStream outputStream;
+	private ObjectInputStream inputStream;
+	private ServerSocket server;
+	private Socket connection;
+	
+	public Server(){
+		super("Window");
+		textField = new JTextField();
+		textField.setEditable(false);
+		textField.addActionListener(
+			new ActionListener(){
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					sendMessage(e.getActionCommand());
+					textField.setText("");
+					
+				}
+			}
+		);
+		add(textField, BorderLayout.NORTH);
+		textArea = new JTextArea();
+		add(new jScrollPane(chatWindow));
+		
+		
+	}
+}

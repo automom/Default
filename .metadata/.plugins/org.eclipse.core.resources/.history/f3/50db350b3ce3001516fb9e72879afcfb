@@ -1,0 +1,50 @@
+package SocketWork;
+import java.util.*;
+import java.io.*;
+import java.net.*;
+import java.awt.*;
+import java.awt.Event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+
+
+public class Server extends JFrame{
+	private JTextField textField;
+	private JTextArea textArea;
+	private ObjectOutputStream outputStream;
+	private ObjectInputStream inputStream;
+	private ServerSocket server;
+	private Socket connection;
+	
+	public Server(){
+		super("Window");
+		textField = new JTextField();
+		textField.setEditable(false);
+		textField.addActionListener(
+			new ActionListener(){
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					//sendMessage(e.getActionCommand());
+					textField.setText("");
+					
+				}
+			}
+		);
+		this.add(textField, BorderLayout.NORTH);
+		textArea = new JTextArea();
+		this.add(new JScrollPane(textArea));
+		this.setSize(300,150);
+		this.setVisible(true);
+		
+	}
+	
+	public void startRunningP(){
+		try{
+			server = new ServerSocket(0000,100);
+		}catch(IOException ioException){
+			
+		}
+	}
+}

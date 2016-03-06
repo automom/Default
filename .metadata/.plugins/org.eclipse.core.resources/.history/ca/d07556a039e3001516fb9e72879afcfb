@@ -1,0 +1,10 @@
+import java.util.*;
+import java.io.*;
+import java.awt.*;
+import java.awt.Event.*;
+import javax.swing.*;
+
+
+public class Server extends JFrame{
+	private textField;
+}
